@@ -1,0 +1,25 @@
+<div>
+
+<input [(ngModel)] = "num" type="text" name="number" readonly="readonly"/>
+<br/>
+<button (click)="append_num(1)">1</button>
+<button (click)="append_num(2)">2</button>
+<button (click)="append_num(3)">3</button>
+<button (click)="res('add')">+</button>
+<br/>
+<button (click)="append_num(4)">4</button>
+<button (click)="append_num(5)">5</button>
+<button (click)="append_num(6)">6</button>
+<button (click)="res('sub')">-</button>
+<br/>
+<button (click)="append_num(7)">7</button>
+<button (click)="append_num(8)">8</button>
+<button (click)="append_num(9)">9</button>
+<button (click)="res('mul')">*</button>
+<br/>
+<button (click)="clr()">C</button>
+<button (click)="append_num(0)">0</button>
+<button (click)="res()">=</button>
+<button (click)="res('div')">/</button>
+<button (click)="decimal()">.</button>
+</div>
