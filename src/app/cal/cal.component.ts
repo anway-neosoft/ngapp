@@ -23,28 +23,33 @@ export class CalComponent implements OnInit {
   }
  
   res(operation:string){
+    var total = 0;
   	if(operation!= undefined && this.state == false){
   		this.oldNum = parseFloat(this.num);
   		this.num = '';
   		this.state =true;
   	}else{
   		if(this.flags.add){
-  			this.num = parseFloat(this.num) + this.oldNum;
+  			total = parseFloat(this.num) + this.oldNum;
+        this.num = total.toString();
   			this.flags.add =false;
   		}
 
   		if(this.flags.sub){
-  			this.num = this.oldNum -parseFloat(this.num);
+  			total = this.oldNum -parseFloat(this.num);
+        this.num = total.toString();
   			this.flags.sub =false;
   		}
 
   		if(this.flags.mul){
-  			this.num = parseFloat(this.num) * this.oldNum;
+  			total = parseFloat(this.num) * this.oldNum;
+        this.num = total.toString();
   			this.flags.mul =false;
   		}
 
   		if(this.flags.div){
-  			this.num = parseFloat(parseFloat(this.oldNum)/parseFloat(this.num));
+  			total = this.oldNum/parseFloat(this.num);
+        this.num = total.toString();
   			this.flags.div =false;
   		}
   		this.oldNum = 0;
